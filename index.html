@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power Gym</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* CSS reset */
+        body {
+            font-family: 'Kanit', sans-serif;
+            color: aliceblue;
+            margin: 0px;
+            padding: 0px;
+            background-image: url('gym.jpg');
+            background-size: 100% 100%;
+        }
+        .left {
+            position: absolute;
+            left: 33px;
+            top: 10px;
+            display: inline-block;
+            /* border: 2px solid red; */
+            text-align: center;
+        }
+
+        .left img {
+            width: 70px;
+        }
+
+        .left div {
+            text-align: center;
+            font-size: 14px;
+            font-family: 'Kanit', sans-serif;
+
+        }
+
+        .mid {
+            display: block;
+            width: 55%;
+            margin: 10px 170px;
+            /* border: 2px solid yellow; */
+        }
+
+        .right {
+            position: absolute;
+            right: 33px;
+            top: 10px;
+            display: inline-block;
+            /* border: 2px solid blue; */
+        }
+
+        .navbar {
+            display: inline-block;
+        }
+
+        .navbar li {
+            display: inline-block;
+            font-size: 20px;
+        }
+
+        .navbar li a {
+            color: white;
+            text-decoration: none;
+            padding: 20px 12px;
+        }
+
+        .navbar li a:hover,
+        .navbar li a.active {
+            text-decoration: underline;
+            color: greenyellow;
+        }
+
+        button {
+            font-family: 'Kanit', sans-serif;
+        }
+
+        .btn {
+            font-family: 'Kanit', sans-serif;
+            margin: 0px 5px;
+            background-color: black;
+            color: white;
+            padding: 3px 4px;
+            border: 3px solid grey;
+            border-radius: 7px;
+            font-size: 13px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: rgb(56, 56, 56);
+        }
+
+        .container {
+            border: 2px solid white;
+            margin: 40px 80px;
+            padding: 30px;
+            width: 33%;
+            border-radius: 25px;
+        }
+
+        .form-group input {
+            font-family: 'Kanit', sans-serif;
+            font-size: 18px;
+            text-align: center;
+            display: block;
+            width: 310px;
+            padding: 7px;
+            margin: 5px auto;
+            border: 2px solid black;
+            border-radius: 12px;
+        }
+
+        .container button {
+            font-size: 21px;
+            display: block;
+            width: 96%;
+            margin: 23px auto
+        }
+    </style>
+</head>
+
+<body>
+        <header class="header">
+            <!-- Left box for logo -->
+            <div class="left">
+                <img src="logo.jpg" alt="Power Gym">
+                <div class="gym">Power Gym</div>
+
+            </div>
+            <!-- Mid box for navbar -->
+            <div class="mid">
+                <ul class="navbar">
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="fitness.html">Fitness Calculator</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <!-- Right box for buttons -->
+            <div class="right">
+                <button class="btn">
+                    Call Us Now
+                </button>
+                <button class="btn">
+                    Email Us
+                </button>
+            </div>
+        </header>
+        <div class="container">
+            <h1>Join the best gym of Bhilai now</h1>
+            <form action="noaction.php">
+                <div class="form-group">
+                    <input type="text" name="" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="" placeholder="Enter your Age">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="" placeholder="Enter your Gender">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="" placeholder="Enter your Locality">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="" placeholder="Enter your Phone Number">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="" placeholder="Enter your E-mail">
+                </div>
+                <button class="btn"><a href="Thankyou.html" style="color:aliceblue">
+                    Submit </a>
+                </button>
+            </form>
+        </div>
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fitness Calculator</title>
+  <style>
+    body{
+      margin: 0px;
+      padding: 0px;
+      background-image: url('fit.jpg');
+      background-size: 1366px 768px;
+      background-repeat: no-repeat;
+      /* background-image: url('fit.jpg');
+            background-size: 100% 100%;
+            background-repeat: no-repeat; */
+    }
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    h2 {
+      text-align: center;
+    }
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+    }
+    input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    .result {
+      margin-top: 20px;
+      text-align: center;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Fitness Calculator</h1>
+    <form id="fitnessForm" onsubmit="calculateCalories(); return false;">
+      <label for="exercise">Select Exercise:</label>
+      <select id="exercise" required>
+        <option value="running">Running</option>
+        <option value="cycling">Cycling</option>
+        <option value="swimming">Swimming</option>
+      </select>
+      
+      <label for="duration">Duration (minutes):</label>
+      <input type="text" id="duration" required>
+      
+      <input type="submit" value="Calculate Calories">
+    </form>
+    <div id="result" class="result"></div>
+  </div>
+
+  <script>
+    function calculateCalories() {
+      var exercise = document.getElementById("exercise").value;
+      var duration = parseFloat(document.getElementById("duration").value);
+      var caloriesBurned;
+      
+      switch (exercise) {
+        case "running":
+          caloriesBurned = duration * 10;
+          break;
+        case "cycling":
+          caloriesBurned = duration * 8;
+          break;
+        case "swimming":
+          caloriesBurned = duration * 12;
+          break;
+        default:
+          caloriesBurned = 0;
+          break;
+      }
+      
+      var resultElement = document.getElementById("result");
+      resultElement.textContent = "Calories burned: " + caloriesBurned.toFixed(2);
+    }
+  </script>
+</body>
+</html>
